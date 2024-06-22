@@ -1,5 +1,6 @@
 <h1>Challenge Rakuten France Multimodal Product Data Classification</h1>
-![Image Rakuten Site de e-commerce](./rakuten.png)
+
+<img src="./rakuten.png" alt="image_rakuten">
 
 <h3>Présentation du projet</h3>
 
