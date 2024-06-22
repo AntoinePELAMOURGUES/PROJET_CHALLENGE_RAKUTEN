@@ -1,6 +1,6 @@
 <h1>Challenge Rakuten France Multimodal Product Data Classification</h1>
 
-<img src="./rakuten.png" alt="image_rakuten" width="400" height="200">
+<img src="./img/rakuten.png" alt="image_rakuten" width="400" height="200">
 
 <h2>:diamond_shape_with_a_dot_inside:Présentation du projet</h2>
 
