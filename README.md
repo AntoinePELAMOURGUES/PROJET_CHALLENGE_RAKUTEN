@@ -1,6 +1,6 @@
 <h1>Challenge Rakuten France Multimodal Product Data Classification</h1>
 
-<img src="./img/rakuten.png" alt="image_rakuten" width="400" height="200">
+<img src="./img/rakuten.png" alt="image_rakuten" width="1000" height="350">
 
 <h2>:diamond_shape_with_a_dot_inside:Contexte</h2>
 
@@ -24,3 +24,49 @@
 </ul>
 
 <p>De plus, le fichier images.zip est fourni contenant toutes les images. La décompression de ce fichier fournira un dossier nommé images avec deux sous-dossiers nommés image_training et image_test, contenant respectivement des images de formation et de test. </p>
+
+<h2>:diamond_shape_with_a_dot_inside:Resultats obtenus concernant le texte</h2>
+
+<h3>Vectorisation par sac de mots</h3>
+
+| Model          | Train Accuracy ± StdDev | Validation Accuracy ± StdDev | Train Weighted F1 Score ± StdDev | Validation Weighted F1 Score ± StdDev | Time                |
+| ------------- | ---------------------- | ---------------------------- | ---------------------------------- | ------------------------------------ | ------------------- |
+| K-Neighbors   | 69.5%                  | 59.5%                        | 71.2%                             | 61.3%                                | 5 seconds           |
+| Logistic Regr.| 70.0%                  | 67.7%                        | 71.2%                             | 61.3%                                | 5 seconds           |
+| Random Forest  | 71.1%                  | 70.9%                        | 71.7%                             | 71.5%                                | 4 ms                |
+| XGBoost       | 82.9%                  | 72.9%                        | 83.7%                             | 73.7%                                | 1.5 minutes        |
+| Neural Netw.  | 80.3%                  | 75.6%                        | 80.4%                             | 75.5%                                | 3 minutes           |
+| Linear SVC    | 71.7%                  | 70.0%                        | 71.3%                             | 69.6%                                | 1 second            |
+| Naive Bayes   | 67.8%                  | 66.0%                        | 65.2%                             | 63.3%                                | 0.1 seconds         |
+
+<h3>Vectorisation par plongement lexical</h3>
+
+| Model         | Accuracy | Top 3 Accuracy | Weight F1 |
+| ------------- | -------- | -------------- | --------- |
+| SVC           | 65%      | 84%            | 63%       |
+| Logistic Regr.| 62%      | 81%            | 61%       |
+| Neural Netw.  | 65%      | 84%            | 64%       |
+
+<h3>LLM</h3>
+
+| Metric        | eval\_loss | eval\_accuracy  | eval\_f1    | eval\_precision   |
+| ------------- | ---------- | --------------- | ----------- | ----------------- |
+| train         | 0.33       | 90.3%           | 88%         | 90%               |
+| val           | 0.74       | 79.1%           | 76.9%       | 79.5%             |
+| test          | 0.75       | 78.7%           | 75.9%       | 78.4%             |
+
+<h2>:diamond_shape_with_a_dot_inside:Resultats obtenus concernant les images</h2>
+
+| Model            | Accuracy | F1Score Weighted | Delay (ms/step) |
+| ---------------- | -------- | --------------- | --------------- |
+| VGG16            | 63.8%    | 63.2%           | 10              |
+| EfficientNet B1   | 53.1%    | 53.7%           | 9               |
+| EfficientNet V2   | 62%      | 61%             | 46              |
+
+<h2>:diamond_shape_with_a_dot_inside:Resultats obtenus par fusion texte et image</h2>
+
+| Model                                  | Merge Type | Text Score | Image Score | Fusion Score |
+| ------------------------------------- | ---------- | ---------- | ----------- | ------------ |
+| Bert + LSTM + InceptionV3               | Early      | 0.742      | 0.628       | 0.83         |
+| LSTM + EfficientNetB4                   | Early      | 0.813      | 0.606       | 0.52\*       |
+| Bert + EfficientNetV2L                  | Score level | 0.848      | 0.67        | 0.8704        |
