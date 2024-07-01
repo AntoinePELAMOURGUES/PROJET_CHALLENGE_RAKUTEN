@@ -70,3 +70,53 @@
 | Bert + LSTM + InceptionV3               | Early      | 0.742      | 0.628       | 0.83         |
 | LSTM + EfficientNetB4                   | Early      | 0.813      | 0.606       | 0.52\*       |
 | Bert + EfficientNetV2L                  | Score level | 0.848      | 0.67        | 0.8704        |
+
+<h2>:diamond_shape_with_a_dot_inside:Création d'une API</h2>
+
+<p>Nous avons créé une API utilisant pour frontend Streamlit et pour backend Fastapi. Nous souhaitions ainsi finaliser le projet en ayant une interface proche de celle des sites de vente en ligne. L'utilisateur choisit sa langue, le modèle qu'il souhaite utiliser puis va saisir le titre et la description de l'objet qu'il souhaite vendre. Il doit ensuite uploader la photographie de l'objet mis en vente. En retour, il reçoit les 3 classes les plus probables correspondantes à son objet :</p>
+
+<img src="./img/page1_app.PNG" alt="image_app_1">
+
+<img src="./img/page2_app.PNG" alt="image_app_2">
+
+
+<h2>:diamond_shape_with_a_dot_inside:Déploiement de l'application</h2>
+
+Suivez ces étapes pour démarrer localement l'application composée des parties frontend et backend :
+
+<ul type="disc">
+  <li>Étape 1 : Obtenir les images Docker</li>  
+    <p>Ouvrez un terminal et vérifiez que vous disposez d'installation valide de Docker. Si ce n'est pas encore fait, suivez les instructions officielles fournies par Docker : <https://docs.docker.com/get-docker/> </p>
+    <p>Téléchargez les images Docker à partir du référentiel public Docker Hub :</p>
+    <p>docker pull antoinepela/projet_rakuten:backend_rakuten_v1.0docker pull antoinepela/backend_rakuten</p>
+    <p>docker pull antoinepela/projet_rakuten:frontend_rakuten_v1.0</p>
+   
+      
+  <li>Étape 2 : Cloner le dépôt</li>
+    <p>Au sein de ce dépôt GitHub, télécharger le fichier docker-compose.yaml situé dans le dossier /app, fichier à placer au sein du dossier contenant les dossiers frontend et backend.</p>
+    
+  <li>Étape 3 : Lancement de l'application</li>
+    <p>Accédez au dossier du dépôt cloné dans le terminal et lancez les applications frontend et backend avec Docker Compose :</p>
+    <p>cd <NOM_DU_DOSSIER_CLONE></p>
+    <p>docker-compose up --build</p>
+    <p>Remplacez <NOM_DU_DOSSIER_CLONE> par le nom du dossier dans lequel vous avez cloné le dépôt. Attendez jusqu'à ce que l'ensemble des services soit démarré avec succès.</p>
+    <p>L'application devrait maintenant être accessible.</p>
+  
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
