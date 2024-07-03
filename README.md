@@ -80,29 +80,71 @@
 <img src="./img/page2_app.PNG" alt="image_app_2">
 
 
-<h2>:diamond_shape_with_a_dot_inside:Déploiement de l'application</h2>
+<h2>:diamond_shape_with_a_dot_inside:Guide de démarrage rapide</h2>
 
-Suivez ces étapes pour démarrer localement l'application composée des parties frontend et backend :
+Vous souhaitez vendre un objet ? Nous vous aiderons à choisir sa classe ! 
 
-<ul type="disc">
-  <li>Étape 1 : Obtenir les images Docker</li>  
-    <p>Ouvrez un terminal et vérifiez que vous disposez d'installation valide de Docker. Si ce n'est pas encore fait, suivez les instructions officielles fournies par Docker : <https://docs.docker.com/get-docker/> </p>
-    <p>Téléchargez les images Docker à partir du référentiel public Docker Hub :</p>
-    <p>docker pull antoinepela/projet_rakuten:backend_rakuten_v1.0docker pull antoinepela/backend_rakuten</p>
-    <p>docker pull antoinepela/projet_rakuten:frontend_rakuten_v1.0</p>
+Suivez ces étapes simples pour lancer rapidement l'application en local.
+
+##  🛠️ Prérequis
+
+Assurez-vous d'avoir installé les éléments suivants sur votre machine :
+
+1. [Python](https://www.python.org/) >= 3.9
+2. [Docker Desktop](https://docs.docker.com/desktop/)
+
+## :computer: Installation
+
+### Clonage du repository
+
+Clonnez ce repository sur votre machine locale :
+
+```bash
+git clone https://github.com/dongnold/dst-sept23-rakuten.git
+```
+
+## :wrench: Configuration de Git LFS
+
+Notre repository contient des modèles Machine Learning volumineux gérés par Git LFS. Après avoir cloné le repository, assurez-vous d'être connecté à Git LFS pour pouvoir télécharger les modèles.
+
+### Instructions :
+
+1. Naviguez jusqu'à la racine du répertoire cloné :
+
+```bash
+cd {REPOSITORY}
+```
+
+2. Connectez-vous à Git LFS :
+
+```bash
+git lfs login
+```
+
+  Entrez vos identifiants GitHub lorsque demandé.
+
+3. Téléchargez les modèles Machine Learning :
+
+```bash
+git lfs pull
+```
+
+4. Construction des images Docker
    
-      
-  <li>Étape 2 : Cloner le dépôt</li>
-    <p>Au sein de ce dépôt GitHub, télécharger le fichier docker-compose.yaml situé dans le dossier /app, fichier à placer au sein du dossier contenant les dossiers frontend et backend.</p>
-    
-  <li>Étape 3 : Lancement de l'application</li>
-    <p>Accédez au dossier du dépôt cloné dans le terminal et lancez les applications frontend et backend avec Docker Compose :</p>
-    <p>cd <NOM_DU_DOSSIER_CLONE></p>
-    <p>docker-compose up --build</p>
-    <p>Remplacez <NOM_DU_DOSSIER_CLONE> par le nom du dossier dans lequel vous avez cloné le dépôt. Attendez jusqu'à ce que l'ensemble des services soit démarré avec succès.</p>
-    <p>L'application devrait maintenant être accessible.</p>
-  
-</ul>
+Naviguez jusqu'à la racine du répertoire cloné et construisez les images Docker nécessaires pour l'application Backend et Frontend :
+
+```bash
+cd {REPOSITORY}
+docker-compose up --build
+```
+
+Ouvrez ensuite un navigateur Web et visitez http://localhost:8000 pour afficher l'interface Streamlit.
+
+De plus, vous pouvez envoyer des requêtes HTTP vers notre API FastAPI en visitant http://localhost:8001. Consultez la documentation OpenAPI Swagger UI pour connaître les points de terminaison disponibles.
+
+## :skull: Arrêt de l'application
+
+Appuyez sur Ctrl+C dans le terminal pour arrêter l'application. Confirmez l'opération si nécessaire.
 
 
 
