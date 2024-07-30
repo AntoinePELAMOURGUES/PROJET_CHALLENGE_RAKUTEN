@@ -4,7 +4,9 @@
 
 <h2>:diamond_shape_with_a_dot_inside:Présentation vidéo du projet (25 minutes)</h2>
 
-<a href="https://drive.google.com/drive/folders/1LRigJ2wB4ictEpvnkkJoA8bDjmhqv2sD?usp=sharing">Voir la présentation du projet</a>
+Cliquez sur l'image ci-dessous pour regarder la vidéo :
+
+[![Regarder la vidéo](https://img.youtube.com/vi/yrr4jtXSoes/hqdefault.jpg)](https://youtu.be/yrr4jtXSoes)
 
 <h2>:diamond_shape_with_a_dot_inside:Contexte</h2>
 
