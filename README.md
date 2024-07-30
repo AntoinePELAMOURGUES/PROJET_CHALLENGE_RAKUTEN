@@ -2,6 +2,10 @@
 
 <img src="./img/rakuten.png" alt="image_rakuten" width="1000" height="350">
 
+<h2>:diamond_shape_with_a_dot_inside:Présentation vidéo du projet (25 minutes)</h2>
+
+<a href="https://drive.google.com/drive/folders/1LRigJ2wB4ictEpvnkkJoA8bDjmhqv2sD?usp=sharing">Voir la présentation du projet</a>
+
 <h2>:diamond_shape_with_a_dot_inside:Contexte</h2>
 
 <p>Ce challenge porte sur le thème de la classification multimodale (texte et image) des codes types de produits à grande échelle où l'objectif est de prédire le code type de chaque produit tel que défini dans le catalogue de Rakuten France.</p>
