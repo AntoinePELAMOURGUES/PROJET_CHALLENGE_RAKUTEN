@@ -77,9 +77,20 @@ Cliquez sur l'image ci-dessous pour regarder la vidéo :
 | LSTM + EfficientNetB4                   | Early      | 0.813      | 0.606       | 0.52\*       |
 | Bert + EfficientNetV2L                  | Score level | 0.848      | 0.67        | 0.8704        |
 
-<h2>:diamond_shape_with_a_dot_inside:Création d'une API</h2>
+<h2>:diamond_shape_with_a_dot_inside:Création d'une application web</h2>
 
-<p>Nous avons créé une API utilisant pour frontend Streamlit et pour backend Fastapi. Nous souhaitions ainsi finaliser le projet en ayant une interface proche de celle des sites de vente en ligne. L'utilisateur choisit sa langue, le modèle qu'il souhaite utiliser puis va saisir le titre et la description de l'objet qu'il souhaite vendre. Il doit ensuite uploader la photographie de l'objet mis en vente. En retour, il reçoit les 3 classes les plus probables correspondantes à son objet :</p>
+<p>
+    Nous avons développé une application web combinant <strong>Streamlit</strong> et <strong>FastAPI</strong>. L'objectif était de créer une interface utilisateur intuitive, inspirée des sites de vente en ligne, pour enrichir l'expérience utilisateur et finaliser notre projet. L'application permet à l'utilisateur de :
+</p>
+<ul>
+    <li>Choisir sa langue.</li>
+    <li>Sélectionner le modèle qu'il souhaite utiliser.</li>
+    <li>Saisir le titre et la description de l'objet qu'il souhaite vendre.</li>
+    <li>Télécharger une photographie de l'objet.</li>
+</ul>
+<p>
+    En retour, l'utilisateur reçoit les trois classes les plus probables correspondant à son objet. Cette architecture repose sur FastAPI, qui gère les requêtes et les traitements en arrière-plan, tandis que Streamlit fournit une interface utilisateur réactive et conviviale. Ensemble, ces technologies permettent une expérience fluide et moderne, idéale pour ce type d'application.
+</p>
 
 <img src="./img/page1_app.PNG" alt="image_app_1">
 
