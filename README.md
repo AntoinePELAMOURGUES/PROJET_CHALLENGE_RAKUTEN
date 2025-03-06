@@ -10,14 +10,21 @@ Cliquez sur l'image ci-dessous pour regarder la vidéo :
 
 <h2>:diamond_shape_with_a_dot_inside:Contexte</h2>
 
-<p>Ce challenge porte sur le thème de la classification multimodale (texte et image) des codes types de produits à grande échelle où l'objectif est de prédire le code type de chaque produit tel que défini dans le catalogue de Rakuten France.</p>
-<p>Le catalogage des listes de produits via la catégorisation des titres et des images est un problème fondamental pour tout marché de commerce électronique, avec des applications allant de la recherche personnalisée et des recommandations à la compréhension des requêtes.</p>
-<p>Les approches de catégorisation manuelles et basées sur des règles ne sont pas évolutives puisque les produits commerciaux sont organisés en plusieurs classes. Le déploiement d'approches multimodales serait une technique utile pour les entreprises de commerce électronique, car elles ont du mal à catégoriser les produits en fonction des images et des étiquettes des commerçants et à éviter les duplications, en particulier lorsqu'elles vendent à la fois des produits neufs et d'occasion auprès de commerçants professionnels et non professionnels, comme le fait Rakuten.</p>
-<p>Les progrès dans ce domaine de recherche ont été limités en raison du manque de données réelles provenant de catalogues commerciaux réels. Le défi présente plusieurs aspects de recherche intéressants en raison de la nature intrinsèquement bruyante des étiquettes et des images des produits, de la taille des catalogues de commerce électronique modernes et de la distribution déséquilibrée typique des données.</p>
+<p>Le challenge Rakuten France Multimodal Product Data Classification s'inscrit dans un enjeu majeur pour les plateformes de commerce en ligne : l'automatisation du catalogage des produits. La classification précise des produits à partir de leurs descriptions textuelles et de leurs images est essentielle pour améliorer la recherche personnalisée, les recommandations et la compréhension des requêtes utilisateurs.
+
+Ce défi propose d'explorer des approches multimodales de classification, en exploitant à la fois les informations textuelles (titres, descriptions) et visuelles (images) des produits. L'objectif est de dépasser les limites des méthodes manuelles ou basées sur des règles, qui ne sont pas adaptées à la taille et à la complexité des catalogues de commerce électronique modernes.
+
+Un aspect particulièrement intéressant de ce challenge est la prise en compte de la nature intrinsèquement bruitée des données (labels et images), ainsi que de la distribution déséquilibrée des classes. Ces contraintes, typiques des données réelles, rendent la tâche de classification particulièrement difficile et motivent l'exploration de techniques robustes et performantes.
+
+Dans le cadre de ce projet, nous avons mis l'accent sur la mise en place d'une chaîne MLOps, depuis l'entraînement des modèles jusqu'à leur déploiement en production via une application web. Notre objectif est de proposer une solution non seulement performante, mais aussi facile à déployer, à monitorer et à maintenir dans un contexte réel.</p>
 
 <h2>:diamond_shape_with_a_dot_inside:Objectif</h2>
 
-<p>L'objectif de ce défi de données est la classification multimodale à grande échelle (texte et image) des données de produits en codes de types de produits. Par exemple, dans le catalogue Rakuten France, un produit avec une désignation ou un titre français « Klarstein Présentoir 2 Montres Optique Fibre » associé à une image et parfois à une description complémentaire. Ce produit est classé sous le code de type de produit 1500. Il existe d'autres produits avec des titres, des images et des descriptions possibles différents, qui se trouvent sous le même code de type de produit. Compte tenu de ces informations sur les produits, comme l'exemple ci-dessus, ce défi propose de modéliser un classificateur pour classer les produits dans son code type de produit correspondant.</p>
+<p>L'objectif principal de ce challenge est de développer un modèle de classification multimodale à grande échelle capable de prédire les codes types des produits du catalogue Rakuten France. Chaque produit est décrit par plusieurs modalités : un titre (ex. "Klarstein Présentoir 2 Montres Optique Fibre"), une image, et parfois une description complémentaire. Ces informations doivent être exploitées conjointement pour associer chaque produit à son code type correspondant (par exemple, le code 1500).
+
+Ce défi vise à surmonter les limitations des approches manuelles ou basées sur des règles, qui ne sont pas adaptées à la complexité et à la taille des catalogues modernes. En s'appuyant sur des techniques avancées de deep learning et de fusion multimodale, le modèle doit être capable de gérer les données bruitées (titres imprécis, images de qualité variable) et la distribution déséquilibrée des classes, tout en offrant une solution scalable pour le commerce électronique.
+
+La performance des modèles sera évaluée à l'aide du score F1 pondéré, un indicateur clé pour mesurer leur capacité à classer correctement les produits dans un environnement réaliste.</p>
 
 <h2>:diamond_shape_with_a_dot_inside:Data description</h2>
 
